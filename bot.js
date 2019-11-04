@@ -16,7 +16,7 @@ client.on('ready', () => {
   if(message.content.startsWith('!')){
   var prefix = "!",
       command = message.content.slice (prefix.length).split (" ")[0],
-      sec = 10;
+      sec = 3600;
   switch (command) {
     case "startloop":
       if (message.channel.timeout) return message.channel.send ('loop is already started, use []stoploop to stop the loop.');
