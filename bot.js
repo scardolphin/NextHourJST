@@ -18,7 +18,7 @@ client.on('ready', () => {
       command = message.content.slice (prefix.length).split (" ")[0],
       sec = 3600;
   switch (command) {
-    case "start time":
+    case "starttime":
       if (message.channel.timeout) return message.channel.send ('loop is already started, use []stoploop to stop the loop.');
       else { message.channel.send('will inform you of the time every hour now starting in '+ (Math.round(leftToFiftyFive()/60000))+ ' minutes.Use []stoploop to stop the loop.');
             message.channel.timeout=setTimeout(function(){ // in leftToFiftyFive() milliseconds run this:
@@ -34,7 +34,7 @@ function leftToFiftyFive(){
 }
            }
       break;
-    case "stop time":
+    case "stoptime":
       if (!message.channel.timeout) return message.channel.send ('no time to stop lol');
       else {
        message.channel.send('Time stopped');
