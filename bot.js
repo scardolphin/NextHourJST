@@ -51,7 +51,7 @@ client.on('message', message => {
 
     if (message.content === 'curTime') {
 
-       message.reply('Current time in Tokyo is '+ new Date().toLocaleTimeString("jp-JP",{timeZone:"Asia/Tokyo"}));
+       message.reply('Current time in Tokyo is '+ new Date().toLocaleTimeString("jp-JP-hc-h24",{timeZone:"Asia/Tokyo"}));
 
        }
  });
