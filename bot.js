@@ -51,7 +51,7 @@ client.on('message', message => {
 
     if (message.content === 'curTime') {
 
-       message.reply(new Date().toLocaleTimeString("jp-JP",{timeZone:"Asia/Tokyo",hour12:false,timeZoneName:"short"}));
+       message.reply(new Date().toLocaleTimeString("jp-JP",{timeZone:"Asia/Tokyo",hour12:false}));
 
        }
  });
