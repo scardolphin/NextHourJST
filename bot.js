@@ -22,8 +22,8 @@ client.on('ready', () => {
       if (message.channel.timeout) return message.channel.send ('time is already started, use !stoptime to stop the loop.');
       else { message.channel.send('Will inform you of the time every hour now starting in '+ (Math.round(leftToFiftyFive()/60000))+ ' minutes.');
             message.channel.timeout=setTimeout(function(){ // in leftToFiftyFive() milliseconds run this:
-            message.channel.send('Current Time in Tokyo: '+new Date().toLocaleTimeString("jp-JP",{timeZone:"Asia/Tokyo"}));
-       message.channel.loop = setInterval (() => message.channel.send (' '+ new Date().toLocaleTimeString("jp-JP",{timeZone:"Asia/Tokyo"})), sec * 1000)
+            message.channel.send(''+new Date().toLocaleTimeString("jp-JP",{timeZone:"Asia/Tokyo",hour12:false,timeZoneName:"short"}));
+       message.channel.loop = setInterval (() => message.channel.send (' '+ new Date().toLocaleTimeString("jp-JP",{timeZone:"Asia/Tokyo",hour12:false,timeZoneName:"short"})), sec * 1000)
     }, leftToFiftyFive())
             
 function leftToFiftyFive(){
